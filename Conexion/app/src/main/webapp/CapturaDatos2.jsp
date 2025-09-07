@@ -19,10 +19,13 @@
         String pais = request.getParameter("pais");
         String tecno = request.getParameter("tecno");
 
+
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
         java.sql.Connection conexion = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "");
         java.sql.Statement sentencia = conexion.createStatement();
 
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        
         String instruccionSql = "INSERT INTO datos_usuarios (Nombre, Apellido, Usuario, Password, Pais, Tecnologia) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contra + "', '" + pais + "', '" + tecno + "')";
         sentencia.executeUpdate(instruccionSql);
         out.println("Registro exitoso");
@@ -45,10 +48,6 @@
 javac -d bin -cp "lib/mysql-connector-java-9.4.0.jar" src/ejercicioPracticoFinal/AppTrabajoFinal1.java
 java -cp "bin:lib/mysql-connector-java-9.4.0.jar" ejercicioPracticoFinal.AppTrabajoFinal1
 -->
-
-
-
-
 
 
 <!-- EN LA TERMINAL DEL VISUAL TENGO QUE PONER:
