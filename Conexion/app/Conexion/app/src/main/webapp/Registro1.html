@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Registro de usuario</h1>
+    <form action="CapturaDatos2.jsp" method="post">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="contra">Contraseña:</label>
+            <input type="password" id="contra" name="contra" required><br><br>
+
+        
+        </fieldset>
+
+        <fieldset>
+            <legend>Pais</legend>
+            <label for="pais">Seleccione su país de procedencia:</label>
+            <select id="pais" name="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Peru">Perú</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Chile">Chile</option>
+                <option value="Panama">Panama</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tecnologías de preferencias: </legend>
+
+            <input type="radio" id="java" name="tecno" value="Java" required>
+            <label for="java">Java</label><br>
+
+            <input type="radio" id="php" name="tecno" value="Php">
+            <label for="php">Php</label><br>
+
+            <input type="radio" id="javascript" name="tecno" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

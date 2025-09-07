@@ -52,15 +52,13 @@ java -cp "bin:lib/mysql-connector-java-9.4.0.jar" ejercicioPracticoFinal.AppTrab
 
 
 <!-- EN LA TERMINAL DEL VISUAL TENGO QUE PONER:
- pwd
- cd /home/marisol/eclipse-workspace/PROYECTO/AppJDBC_JSP/Conexion/app
 mvn clean package
 ls target/
-sudo cp target/app.war /opt/tomcat11/webapps/
+sudo cp target/miweb.war /opt/tomcat11/webapps/
 -->
 <!-- ABRO LA TERMINAL DE UBUNTU Y REINICIO TOMCAT:
 sudo systemctl restart tomcat
 -->
 <!-- DESPUES EN EL NAVEGADOR PONGO:
-http://localhost:8080/AppJDBC_JSP/CapturaDatos2.jsp
+http://localhost:8080/miweb/Calculos2.jsp
 →
