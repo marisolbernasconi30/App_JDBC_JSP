@@ -22,11 +22,11 @@
 
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        java.sql.Connection conexion = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "");
+        java.sql.Connection conexion = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "jspuser", "1234");
         java.sql.Statement sentencia = conexion.createStatement();
 
         
-        String instruccionSql = "INSERT INTO datos_usuarios (Nombre, Apellido, Usuario, Password, Pais, Tecnologia) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contra + "', '" + pais + "', '" + tecno + "')";
+        String instruccionSql = "INSERT INTO datos (nombre, apellido, usuario, contra, pais, tecnologia) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contra + "', '" + pais + "', '" + tecno + "')";
         sentencia.executeUpdate(instruccionSql);
         out.println("Registro exitoso");
         sentencia.close();
@@ -61,5 +61,5 @@ sudo cp target/app.war /opt/tomcat11/webapps/
 sudo systemctl restart tomcat
 -->
 <!-- DESPUES EN EL NAVEGADOR PONGO:
-http://localhost:8080/AppJDBC_JSP/CapturaDatos2.jsp
+http://localhost:8080/app/CapturaDatos2.jsp
 →
