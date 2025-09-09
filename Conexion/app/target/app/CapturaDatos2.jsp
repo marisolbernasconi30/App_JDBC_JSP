@@ -10,6 +10,9 @@
 
 <h1>Captura de datos</h1>
 
+
+
+<%@ page import="java.sql.*" %>
 <!-- NOMBRES DE LAS VARIABLES:  -->
     <%
         String nombre = request.getParameter("nombre");
@@ -22,8 +25,8 @@
 
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        java.sql.Connection conexion = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "jspuser", "1234");
-        java.sql.Statement sentencia = conexion.createStatement();
+        Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "jspuser", "1234");
+        Statement sentencia = conexion.createStatement();
 
         
         String instruccionSql = "INSERT INTO datos (nombre, apellido, usuario, contra, pais, tecnologia) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contra + "', '" + pais + "', '" + tecno + "')";
