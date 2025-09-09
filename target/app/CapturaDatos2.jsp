@@ -25,6 +25,10 @@
 
 
         Class.forName("com.mysql.cj.jdbc.Driver");
+
+        try {
+
+        
         Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "jspuser", "1234");
         Statement sentencia = conexion.createStatement();
 
@@ -33,6 +37,10 @@
         sentencia.executeUpdate(instruccionSql);
         out.println("Registro exitoso");
         sentencia.close();
+        
+    } catch (Exception e){
+        out.println("Error en el registro" + e.getMessage());
+    }
     %>
 
     
@@ -65,4 +73,5 @@ sudo systemctl restart tomcat
 -->
 <!-- DESPUES EN EL NAVEGADOR PONGO:
 http://localhost:8080/app/CapturaDatos2.jsp
-→
+-->
+<!-- git push origin main -->
