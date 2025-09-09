@@ -65,5 +65,4 @@ sudo systemctl restart tomcat
 -->
 <!-- DESPUES EN EL NAVEGADOR PONGO:
 http://localhost:8080/app/CapturaDatos2.jsp
--->
-<!-- git push origin main -->
+→
