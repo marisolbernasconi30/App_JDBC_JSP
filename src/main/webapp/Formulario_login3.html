@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Registro de usuario</h1>
+    <form action="CompruebaUsuario4.jsp" method="post">
+        <fieldset>
+            <legend>Registro: </legend>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="contra">Contraseña:</label>
+            <input type="password" id="contra" name="contra" required><br><br>
+        </fieldset>
+        <input type="submit" value="Iniciar">
+    </form>
+</body>
+</html>
+
+<!-- EN LA TERMINAL DEL VISUAL TENGO QUE PONER:
+ pwd
+ cd /home/marisol/eclipse-workspace/PROYECTO/AppJDBC_JSP/Conexion/app
+mvn clean package
+ls target/
+sudo cp target/app.war /opt/tomcat11/webapps/
+-->
+<!-- ABRO LA TERMINAL DE UBUNTU Y REINICIO TOMCAT:
+sudo systemctl restart tomcat
+-->
+<!-- DESPUES EN EL NAVEGADOR PONGO:
+http://localhost:8080/app/Formulario_login3.html
+→
